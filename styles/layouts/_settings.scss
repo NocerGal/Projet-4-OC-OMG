@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+// Google fonts utilisées .ttf
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url(../fonts/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter/Inter-VariableFont_slnt\wght.ttf);
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../fonts/Shrikhand/Shrikhand-Regular.ttf);
+}
+
+// Variable des fonts
+$font-roboto-bold: Roboto-Bold, sans-serif;
+$font-roboto-medium: Roboto-Medium, sans-serif;
+$font-roboto-regular: Roboto-Regular, sans-serif;
+$fon-roboto-light: Roboto-Light, sans-serif;
+$font-roboto-thin: Roboto-Thin, sans-serif;
+$font-inter: Inter, sans-serif;
+$font-Shrikhand: Shrikhand, sans-serif;
+
+// COuleurs principales du projet
+$fade-green: #99e2d0;
+$green: #008766;
+$skyblue: #89c8fa;
+$oceanblue: #003a68;
+$purple: #9356dc;
+$fade-pruple: #F5EDFF;
+$grey: #353535;
+$light-grey1: #ebeaea;
+$light-grey2: #f6f6f6;
+
+$width-var: 70%;
+
+// Mixin
+
+@mixin childCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Settings généraux
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: $font-Shrikhand;
+  font-size: 1.875rem;
+  text-align: center;
+  padding: 10px 0;
+
+  @media only screen and (min-width: 1055px) {
+    font-size: 2.313rem;
+  }
+}
+
+h2 {
+  font-family: $font-roboto-bold;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-family: $font-Shrikhand;
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-family: $font-Shrikhand;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+h5 {
+  font-family: $font-roboto-bold;
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-family: $font-roboto-thin;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  position: relative;
+  
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 24px;
+    width: 40px;
+    background: $fade-green;
+    height: 3px;
+  }
+
+}
+
+p,
+li {
+  font-family: $fon-roboto-light;
+  font-size: 1.125rem;
+  line-height: 21.09px;
+  letter-spacing: 0px;
+}
+
+li {
+  cursor: pointer;
+}
+
+button {
+
+  transition: all 200ms;
+
+  &:hover   p  i{
+    color: $purple;
+  }
+
+  @include childCenter;
+  position: relative;
+  height: 72.38px;
+  width: 322.49px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  background: $light-grey2;
+  position: relative;
+
+  &:hover{
+    background: $fade-pruple;
+  }
+
+
+  span {
+    position: relative;
+    left: -18%;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+
+    i {
+      padding-right: 20px;
+    }
+  }
+}
+
+span {
+  position: absolute;
+  font-family: $font-roboto-medium;
+  // width: 30px;
+  // height: 30px;
+  // line-height: 30px;
+  font-size: 0.886rem;
+  background: $purple;
+  color: white;
+  border-radius: 150px;
+  left: -20px;
+}
+
+// à bouger dans components car nom de class
+.card-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  height: 100%;
+
+  i {
+    font-size: 30px;
+    font-weight: 100;
+  }
+}

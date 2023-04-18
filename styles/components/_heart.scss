@@ -1,0 +1,10 @@
+.fa-regular{
+    cursor: pointer;
+      &:hover{
+        font-weight: 900;
+        background: -webkit-linear-gradient(190deg, #9356dc, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  

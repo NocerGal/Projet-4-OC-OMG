@@ -1,0 +1,29 @@
+.btn {
+    @include childCenter;
+    height: 50px;
+    width: 56%;
+    max-width: 218px;
+    border-radius: 25px;
+    padding: 13px 16px;
+    background: linear-gradient(0deg, #9356dc, #ff79da);
+    cursor: pointer;
+  
+    &:active{
+      opacity: 0.8;
+    }
+    
+    &:hover {
+      animation: gradient-in  325ms;
+      animation-fill-mode: forwards;
+    }
+  
+    &:not(:hover){
+  animation: gradient-out   325ms forwards;
+    }
+  
+    p {
+      font-family: $font-roboto-medium;
+      font-size: 1rem;
+      color: white;
+    }
+  }

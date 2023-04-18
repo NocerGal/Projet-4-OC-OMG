@@ -1,0 +1,91 @@
+// On doit mettre mixin, keyframes
+
+@keyframes gradient-in {
+    0% {
+      background: linear-gradient(0deg, #9356dc, #ff79da);
+    }
+
+    10% {
+      background: linear-gradient(1deg, #9356dc, #ff79da);
+    }
+
+    20% {
+      background: linear-gradient(2deg, #9356dc, #ff79da);
+    }
+    30% {
+      background: linear-gradient(3deg, #9356dc, #ff79da);
+    }
+
+    40% {
+      background: linear-gradient(4deg, #9356dc, #ff79da);
+    }
+
+    50% {
+      background: linear-gradient(5deg, #9356dc, #ff79da);
+    }
+
+    60% {
+      background: linear-gradient(6deg, #9356dc, #ff79da);
+    }
+
+    70% {
+      background: linear-gradient(7deg, #9356dc, #ff79da);
+    }
+
+    80% {
+      background: linear-gradient(8deg, #9356dc, #ff79da);
+    }
+
+    90% {
+      background: linear-gradient(9deg, #9356dc, #ff79da);
+    }
+
+    100% {
+      background: linear-gradient(10deg, #9356dc, #ff79da);
+    }
+  }
+
+  @keyframes gradient-out {
+    0% {
+      background: linear-gradient(10deg, #9356dc, #ff79da);
+    }
+
+    10% {
+      background: linear-gradient(9deg, #9356dc, #ff79da);
+    }
+
+    20% {
+      background: linear-gradient(8deg, #9356dc, #ff79da);
+    }
+    30% {
+      background: linear-gradient(7deg, #9356dc, #ff79da);
+    }
+
+    40% {
+      background: linear-gradient(6deg, #9356dc, #ff79da);
+    }
+
+    50% {
+      background: linear-gradient(5deg, #9356dc, #ff79da);
+    }
+
+    60% {
+      background: linear-gradient(4deg, #9356dc, #ff79da);
+    }
+
+    70% {
+      background: linear-gradient(3deg, #9356dc, #ff79da);
+    }
+
+    80% {
+      background: linear-gradient(2deg, #9356dc, #ff79da);
+    }
+
+    90% {
+      background: linear-gradient(1deg, #9356dc, #ff79da);
+    }
+
+    100% {
+      background: linear-gradient(0sdeg, #9356dc, #ff79da);
+    }
+  }

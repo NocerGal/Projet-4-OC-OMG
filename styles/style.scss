@@ -1,0 +1,12 @@
+@import "./layouts/setting";
+@import "./layouts/header";
+@import "./layouts/main";
+@import "./layouts/footer";
+
+//components
+@import "./components/_buttons.scss";
+@import "./components/_news.scss";
+@import "./components/heart.scss";
+
+//core
+@import "./core/core"

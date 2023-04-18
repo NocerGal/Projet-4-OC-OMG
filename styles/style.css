@@ -1,0 +1,596 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url(../fonts/Roboto/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter/Inter-VariableFont_slntwght.ttf);
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../fonts/Shrikhand/Shrikhand-Regular.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.875rem;
+  text-align: center;
+  padding: 10px 0;
+}
+@media only screen and (min-width: 1055px) {
+  h1 {
+    font-size: 2.313rem;
+  }
+}
+
+h2 {
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+h5 {
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-family: Roboto-Thin, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+h6:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 24px;
+  width: 40px;
+  background: #99e2d0;
+  height: 3px;
+}
+
+p,
+li {
+  font-family: Roboto-Light, sans-serif;
+  font-size: 1.125rem;
+  line-height: 21.09px;
+  letter-spacing: 0px;
+}
+
+li {
+  cursor: pointer;
+}
+
+button {
+  transition: all 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 72.38px;
+  width: 322.49px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  background: #f6f6f6;
+  position: relative;
+}
+button:hover p i {
+  color: #9356dc;
+}
+button:hover {
+  background: #F5EDFF;
+}
+button span {
+  position: relative;
+  left: -18%;
+}
+button p {
+  display: flex;
+  align-items: center;
+}
+button p i {
+  padding-right: 20px;
+}
+
+span {
+  position: absolute;
+  font-family: Roboto-Medium, sans-serif;
+  font-size: 0.886rem;
+  background: #9356dc;
+  color: white;
+  border-radius: 150px;
+  left: -20px;
+}
+
+.card-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  height: 100%;
+}
+.card-description i {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 1055px) {
+  header {
+    height: 96px;
+  }
+}
+header .header-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+header .header-container i {
+  font-size: 16px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  cursor: pointer;
+  padding: 10px;
+}
+header .header-container i:hover {
+  color: #9356dc;
+  padding: 10px;
+  border-radius: 150px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+main .gps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0 15px;
+  background: #ebeaea;
+  background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, rgb(234, 234, 234) 100%);
+}
+main i {
+  padding-right: 10px;
+}
+main .choose-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 0;
+  background: #f6f6f6;
+}
+@media only screen and (min-width: 1055px) {
+  main .choose-menu h2 {
+    font-size: 2.5em;
+  }
+}
+main .choose-menu p:nth-child(2) {
+  margin: 15px 0 30px;
+}
+@media only screen and (min-width: 1055px) {
+  main .choose-menu p:nth-child(2) {
+    margin: 30px 0;
+  }
+}
+main .functioning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 0 70px;
+  width: 335px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1055px) {
+  main .functioning {
+    display: flex;
+    align-items: flex-start;
+    width: 70%;
+    min-width: 1080px;
+  }
+}
+main .functioning h2 {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1055px) {
+  main .functioning .buttons-functioning {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 36px;
+  }
+  main .functioning .buttons-functioning button {
+    flex-grow: 1;
+    width: auto;
+  }
+}
+main .restaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ebeaea;
+  padding: 50px 0;
+}
+main .restaurants .restaurants-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: start;
+  align-items: flex-start;
+  width: 335px;
+}
+main .restaurants .restaurants-container h2 {
+  border: 1px solid red;
+}
+@media only screen and (min-width: 1055px) {
+  main .restaurants .restaurants-container {
+    display: flex;
+    min-width: 1080px;
+    align-items: flex-start;
+  }
+}
+main .restaurants .restaurants-container .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0 30px;
+  gap: 50px;
+  row-gap: 50px;
+}
+@media only screen and (min-width: 1055px) {
+  main .restaurants .restaurants-container .card-container {
+    border: 1px solid blue;
+    width: 100%;
+  }
+  main .restaurants .restaurants-container .card-container a {
+    flex-grow: 1;
+  }
+  main .restaurants .restaurants-container .card-container .card {
+    max-height: 251px;
+    flex-grow: 1;
+    min-width: 490px;
+    border: 1px solid red;
+    margin: 0;
+    margin-right: 0;
+  }
+}
+main .restaurants .restaurants-container .card-container .card {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  height: 251px;
+  width: 335px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 1px 9px -6px grey;
+  cursor: pointer;
+  position: relative;
+}
+@media only screen and (min-width: 1055px) {
+  main .restaurants .restaurants-container .card-container .card {
+    margin-bottom: 0;
+  }
+}
+main .restaurants .restaurants-container .card-container .card img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .background-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 275px;
+}
+main .menus {
+  position: relative;
+  height: 100%;
+  top: -50px;
+  background: #ebeaea;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+@media only screen and (min-width: 1055px) {
+  main .menus {
+    background: none;
+  }
+}
+main .menus .menus-container {
+  width: 93%;
+  margin: 0 auto;
+  max-width: 1055px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background: #ebeaea;
+  padding: 50px 0 40px;
+}
+main .menus .menus-container h4 {
+  margin-bottom: 42px;
+}
+main .menus .menus-container h4 i {
+  margin-left: 24px;
+}
+main .menus .menus-container .plats {
+  margin-bottom: 40px;
+  max-width: 634px;
+  margin: 0 auto 40px;
+}
+main .menus .menus-container div {
+  display: flex;
+  flex-direction: column;
+}
+main .menus .menus-container div button {
+  padding: 0;
+  width: auto;
+  margin-bottom: 12px;
+}
+main .menus .menus-container div button:hover .green-tick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .menus .menus-container div button .green-tick {
+  display: none;
+  background: #99e2d0;
+  height: 100%;
+  width: 100px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+main .menus .menus-container div button .green-tick .fa-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #99e2d0;
+  border-radius: 150px;
+  font-weight: 800;
+  padding: 5px;
+  transition: all 300ms;
+}
+main .menus .menus-container div button .card-description {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 100%;
+  padding: 12px, 5px, 12px, 20px;
+}
+main .menus .menus-container div button .card-description .price {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+main .menus .menus-container div button .card-description .card-txt {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .menus .menus-container .btn {
+  margin: 0 auto 0;
+}
+
+footer {
+  background: #353535;
+  padding: 25px 25px 35px;
+  margin-top: -50px;
+}
+footer h3,
+footer li,
+footer p,
+footer i {
+  color: white;
+  font-size: 1rem;
+}
+footer i {
+  font-size: 0.7rem;
+  padding-right: 15px;
+}
+@media only screen and (min-width: 1055px) {
+  footer {
+    padding: 50px 100px 40px;
+  }
+  footer .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  footer .footer-container nav {
+    margin-top: -8px;
+    margin-right: 30px;
+  }
+  footer .footer-container nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer .footer-container nav ul li {
+    margin-right: 50px;
+  }
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+li {
+  margin-top: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 56%;
+  max-width: 218px;
+  border-radius: 25px;
+  padding: 13px 16px;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+  cursor: pointer;
+}
+.btn:active {
+  opacity: 0.8;
+}
+.btn:hover {
+  animation: gradient-in 325ms;
+  animation-fill-mode: forwards;
+}
+.btn:not(:hover) {
+  animation: gradient-out 325ms forwards;
+}
+.btn p {
+  font-family: Roboto-Medium, sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.card span {
+  font-size: 0.875rem;
+  color: #008766;
+  background: #99e2d0;
+  border-radius: 0;
+  position: absolute;
+  top: 5%;
+  left: 75%;
+}
+
+.fa-regular {
+  cursor: pointer;
+}
+.fa-regular:hover {
+  font-weight: 900;
+  background: -webkit-linear-gradient(190deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-in {
+  0% {
+    background: linear-gradient(0deg, #9356dc, #ff79da);
+  }
+  10% {
+    background: linear-gradient(1deg, #9356dc, #ff79da);
+  }
+  20% {
+    background: linear-gradient(2deg, #9356dc, #ff79da);
+  }
+  30% {
+    background: linear-gradient(3deg, #9356dc, #ff79da);
+  }
+  40% {
+    background: linear-gradient(4deg, #9356dc, #ff79da);
+  }
+  50% {
+    background: linear-gradient(5deg, #9356dc, #ff79da);
+  }
+  60% {
+    background: linear-gradient(6deg, #9356dc, #ff79da);
+  }
+  70% {
+    background: linear-gradient(7deg, #9356dc, #ff79da);
+  }
+  80% {
+    background: linear-gradient(8deg, #9356dc, #ff79da);
+  }
+  90% {
+    background: linear-gradient(9deg, #9356dc, #ff79da);
+  }
+  100% {
+    background: linear-gradient(10deg, #9356dc, #ff79da);
+  }
+}
+@keyframes gradient-out {
+  0% {
+    background: linear-gradient(10deg, #9356dc, #ff79da);
+  }
+  10% {
+    background: linear-gradient(9deg, #9356dc, #ff79da);
+  }
+  20% {
+    background: linear-gradient(8deg, #9356dc, #ff79da);
+  }
+  30% {
+    background: linear-gradient(7deg, #9356dc, #ff79da);
+  }
+  40% {
+    background: linear-gradient(6deg, #9356dc, #ff79da);
+  }
+  50% {
+    background: linear-gradient(5deg, #9356dc, #ff79da);
+  }
+  60% {
+    background: linear-gradient(4deg, #9356dc, #ff79da);
+  }
+  70% {
+    background: linear-gradient(3deg, #9356dc, #ff79da);
+  }
+  80% {
+    background: linear-gradient(2deg, #9356dc, #ff79da);
+  }
+  90% {
+    background: linear-gradient(1deg, #9356dc, #ff79da);
+  }
+  100% {
+    background: linear-gradient(0sdeg, #9356dc, #ff79da);
+  }
+}/*# sourceMappingURL=style.css.map */

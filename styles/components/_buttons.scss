@@ -9,12 +9,13 @@
     cursor: pointer;
   
     &:active{
-      opacity: 0.8;
+      
     }
     
     &:hover {
       animation: gradient-in  325ms;
       animation-fill-mode: forwards;
+      opacity: 0.8;
     }
   
     &:not(:hover){

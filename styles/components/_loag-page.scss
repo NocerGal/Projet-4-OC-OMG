@@ -1,0 +1,56 @@
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  letter-spacing: 5px;
+  background-color: rgba(238, 235, 231, 0.6);
+  z-index: 9999;
+  position: absolute;
+  animation: 3s loaderAnimation forwards;
+
+    .circle {
+      display: flex;
+      justify-content: center;
+      border-top: 3px solid #9356dc;
+      border-bottom: 3px solid #9356dc;
+      border-radius: 150px;
+      height: 100px;
+      width: 100px;
+      transform: rotate(0.2turn);
+      animation: 1500ms circleAnimation infinite alternate ease-in-out;
+    }
+
+      .dot {
+       transform: translateY(-92px) translateX(0px);
+        display: flex;
+        justify-content: center;
+
+
+        .first {
+          line-height: 45px;
+          animation: doteAnimation 400ms infinite alternate;
+          color: #9356dc;
+
+        }
+
+        .second {
+          line-height: 45px;
+          animation: doteAnimation 400ms infinite alternate;
+          animation-delay: 250ms;
+          color: #ff79da
+        }
+
+        .third {
+          line-height: 45px;
+          animation: doteAnimation 400ms infinite alternate;
+          animation-delay: 400ms;
+          color: #ff79da;
+        }
+      }
+    }
+  
+
+

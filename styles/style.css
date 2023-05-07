@@ -118,11 +118,12 @@ button:hover p i {
   color: #9356dc;
 }
 button:hover {
-  background: #F5EDFF;
+  background: #f5edff;
 }
 button span {
   position: relative;
   left: -18%;
+  padding: 4px 8px;
 }
 button p {
   display: flex;
@@ -356,16 +357,33 @@ main .menus .menus-container {
   background: #ebeaea;
   padding: 50px 0 40px;
 }
-main .menus .menus-container h4 {
-  margin-bottom: 42px;
+main .menus .menus-container .title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 643px;
+  margin: auto;
 }
-main .menus .menus-container h4 i {
-  margin-left: 24px;
+main .menus .menus-container .title-container h4 {
+  margin-bottom: 42px;
+  margin-right: 24px;
 }
 main .menus .menus-container .plats {
   margin-bottom: 40px;
   max-width: 634px;
   margin: 0 auto 40px;
+  transform: translateX(-1000px);
+}
+main .menus .menus-container .plats:nth-child(2) {
+  animation: lefttorightAnimation 1500ms ease-in-out forwards;
+}
+main .menus .menus-container .plats:nth-child(3) {
+  animation: lefttorightAnimation 1500ms ease-in-out forwards;
+  animation-delay: 200ms;
+}
+main .menus .menus-container .plats:nth-child(4) {
+  animation: lefttorightAnimation 1500ms ease-in-out forwards;
+  animation-delay: 400ms;
 }
 main .menus .menus-container div {
   display: flex;
@@ -375,21 +393,34 @@ main .menus .menus-container div button {
   padding: 0;
   width: auto;
   margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .menus .menus-container div button:hover .green-tick {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transform: translateX(-100px);
 }
 main .menus .menus-container div button .green-tick {
-  display: none;
+  position: relative;
+  right: -100px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
   background: #99e2d0;
   height: 100%;
   width: 100px;
+  padding: 12px 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  transition: 500ms ease-in-out;
 }
-main .menus .menus-container div button .green-tick .fa-check {
+main .menus .menus-container div button .green-tick .price {
+  transform: translateX(-90px);
+}
+main .menus .menus-container div button .green-tick i {
+  transform: translateX(-60%) translateY(-40%);
+}
+main .menus .menus-container div button .fa-check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -400,19 +431,13 @@ main .menus .menus-container div button .green-tick .fa-check {
   padding: 5px;
   transition: all 300ms;
 }
-main .menus .menus-container div button .card-description {
+main .menus .menus-container div .card-description {
   display: grid;
   grid-template-columns: 80% 20%;
   width: 100%;
-  padding: 12px, 5px, 12px, 20px;
+  padding: 12px 15px;
 }
-main .menus .menus-container div button .card-description .price {
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-main .menus .menus-container div button .card-description .card-txt {
+main .menus .menus-container div .card-description .card-txt {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -422,7 +447,7 @@ main .menus .menus-container div button .card-description .card-txt {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .menus .menus-container .btn {
+main .menus .btn {
   margin: 0 auto 0;
 }
 
@@ -476,6 +501,53 @@ li {
   margin-top: 10px;
 }
 
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  letter-spacing: 5px;
+  background-color: rgba(238, 235, 231, 0.6);
+  z-index: 9999;
+  position: absolute;
+  animation: 3s loaderAnimation forwards;
+}
+.loader .circle {
+  display: flex;
+  justify-content: center;
+  border-top: 3px solid #9356dc;
+  border-bottom: 3px solid #9356dc;
+  border-radius: 150px;
+  height: 100px;
+  width: 100px;
+  transform: rotate(0.2turn);
+  animation: 1500ms circleAnimation infinite alternate ease-in-out;
+}
+.loader .dot {
+  transform: translateY(-92px) translateX(0px);
+  display: flex;
+  justify-content: center;
+}
+.loader .dot .first {
+  line-height: 45px;
+  animation: doteAnimation 400ms infinite alternate;
+  color: #9356dc;
+}
+.loader .dot .second {
+  line-height: 45px;
+  animation: doteAnimation 400ms infinite alternate;
+  animation-delay: 250ms;
+  color: #ff79da;
+}
+.loader .dot .third {
+  line-height: 45px;
+  animation: doteAnimation 400ms infinite alternate;
+  animation-delay: 400ms;
+  color: #ff79da;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -488,12 +560,10 @@ li {
   background: linear-gradient(0deg, #9356dc, #ff79da);
   cursor: pointer;
 }
-.btn:active {
-  opacity: 0.8;
-}
 .btn:hover {
   animation: gradient-in 325ms;
   animation-fill-mode: forwards;
+  opacity: 0.8;
 }
 .btn:not(:hover) {
   animation: gradient-out 325ms forwards;
@@ -512,16 +582,32 @@ li {
   position: absolute;
   top: 5%;
   left: 75%;
+  padding: 7px 9px;
 }
 
-.fa-regular {
-  cursor: pointer;
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  width: 22px;
 }
-.fa-regular:hover {
-  font-weight: 900;
-  background: -webkit-linear-gradient(190deg, #9356dc, #ff79da);
+.icon-stack .fa-solid,
+.icon-stack .fa-regular {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+}
+.icon-stack .fa-solid {
+  z-index: 100;
+  opacity: 0%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+          background-clip: text;
+  background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  color: transparent;
+  transition: 200ms;
+}
+.icon-stack .fa-solid:hover {
+  opacity: 100%;
 }
 
 @keyframes gradient-in {
@@ -592,5 +678,76 @@ li {
   }
   100% {
     background: linear-gradient(0sdeg, #9356dc, #ff79da);
+  }
+}
+@keyframes doteAnimation {
+  0% {
+    transform: translateY(-1px);
+    color: #9356dc;
+  }
+  10% {
+    transform: translateY(-3px);
+  }
+  20% {
+    transform: translateY(-5px);
+  }
+  30% {
+    transform: translateY(-7px);
+  }
+  40% {
+    transform: translateY(-9px);
+  }
+  50% {
+    transform: translateY(-11px);
+  }
+  60% {
+    transform: translateY(-13px);
+  }
+  70% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(-17px);
+  }
+  90% {
+    transform: translateY(-19px);
+  }
+  100% {
+    transform: translateY(-21px);
+    color: #ff79da;
+  }
+}
+@keyframes lefttorightAnimation {
+  0% {
+    transform: translateX(-1000px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes circleAnimation {
+  from {
+    transform: rotate(0.2turn);
+  }
+  to {
+    transform: rotate(2turn);
+  }
+}
+@keyframes loaderAnimation {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.9;
+  }
+  98% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    z-index: -9999;
   }
 }/*# sourceMappingURL=style.css.map */

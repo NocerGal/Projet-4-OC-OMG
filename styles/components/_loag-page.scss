@@ -11,46 +11,41 @@
   position: absolute;
   animation: 3s loaderAnimation forwards;
 
-    .circle {
-      display: flex;
-      justify-content: center;
-      border-top: 3px solid #9356dc;
-      border-bottom: 3px solid #9356dc;
-      border-radius: 150px;
-      height: 100px;
-      width: 100px;
-      transform: rotate(0.2turn);
-      animation: 1500ms circleAnimation infinite alternate ease-in-out;
+  .circle {
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid #9356dc;
+    border-bottom: 3px solid #9356dc;
+    border-radius: 150px;
+    height: 100px;
+    width: 100px;
+    transform: rotate(0.2turn);
+    animation: 1500ms circleAnimation infinite alternate ease-in-out;
+  }
+
+  .dot {
+    transform: translateY(-92px) translateX(0px);
+    display: flex;
+    justify-content: center;
+
+    .first {
+      line-height: 45px;
+      animation: doteAnimation 400ms infinite alternate;
+      color: #9356dc;
     }
 
-      .dot {
-       transform: translateY(-92px) translateX(0px);
-        display: flex;
-        justify-content: center;
-
-
-        .first {
-          line-height: 45px;
-          animation: doteAnimation 400ms infinite alternate;
-          color: #9356dc;
-
-        }
-
-        .second {
-          line-height: 45px;
-          animation: doteAnimation 400ms infinite alternate;
-          animation-delay: 250ms;
-          color: #ff79da
-        }
-
-        .third {
-          line-height: 45px;
-          animation: doteAnimation 400ms infinite alternate;
-          animation-delay: 400ms;
-          color: #ff79da;
-        }
-      }
+    .second {
+      line-height: 45px;
+      animation: doteAnimation 400ms infinite alternate;
+      animation-delay: 250ms;
+      color: #ff79da;
     }
-  
 
-
+    .third {
+      line-height: 45px;
+      animation: doteAnimation 400ms infinite alternate;
+      animation-delay: 400ms;
+      color: #ff79da;
+    }
+  }
+}

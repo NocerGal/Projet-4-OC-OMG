@@ -92,7 +92,6 @@
   }
 }
 
-
 @keyframes doteAnimation {
   0% {
     transform: translateY(-1px);
@@ -146,7 +145,7 @@
     transform: translateX(-1000px);
   }
 
-  80%{
+  80% {
     transform: translateX(20px);
   }
 
@@ -155,33 +154,30 @@
   }
 }
 
-
-
 @keyframes circleAnimation {
-  from{
+  from {
     transform: rotate(0.2turn);
   }
 
-  to{
+  to {
     transform: rotate(2turn);
   }
 }
 
-
 @keyframes loaderAnimation {
-  0%{
+  0% {
     opacity: 1;
   }
 
-  95%{
+  95% {
     opacity: 0.9;
   }
 
-  98%{
+  98% {
     opacity: 0.8;
   }
 
-  100%{
+  100% {
     opacity: 0;
     z-index: -9999;
   }

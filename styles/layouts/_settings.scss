@@ -51,7 +51,7 @@ $green: #008766;
 $skyblue: #89c8fa;
 $oceanblue: #003a68;
 $purple: #9356dc;
-$fade-pruple: #F5EDFF;
+$fade-pruple: #f5edff;
 $grey: #353535;
 $light-grey1: #ebeaea;
 $light-grey2: #f6f6f6;
@@ -114,8 +114,8 @@ h6 {
   font-size: 1rem;
   margin-bottom: 20px;
   position: relative;
-  
-  &:after{
+
+  &:after {
     content: "";
     position: absolute;
     left: 0;
@@ -124,7 +124,6 @@ h6 {
     background: $fade-green;
     height: 3px;
   }
-
 }
 
 p,
@@ -140,10 +139,9 @@ li {
 }
 
 button {
-
   transition: all 200ms;
 
-  &:hover   p  i{
+  &:hover p i {
     color: $purple;
   }
 
@@ -161,14 +159,14 @@ button {
   background: $light-grey2;
   position: relative;
 
-  &:hover{
+  &:hover {
     background: $fade-pruple;
   }
-
 
   span {
     position: relative;
     left: -18%;
+    padding: 4px 8px;
   }
 
   p {

@@ -1,10 +1,28 @@
-.fa-regular{
-    cursor: pointer;
-      &:hover{
-        font-weight: 900;
-        background: -webkit-linear-gradient(190deg, #9356dc, #ff79da);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .icon-stack {
+      position: relative;
+      display: inline-block;
+      margin-left: 30px;
+      font-size: 22px;
+
+      .fa-solid,
+      .fa-regular {
+        cursor: pointer;
+        position: absolute;
+        top: 8px;
       }
+
+      .fa-solid {
+        z-index: 100;
+        opacity: 0%;
+        background-clip: text;
+        background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        color: transparent;
+        transition: 200ms;
+
+
+        &:hover {
+          opacity: 100%;
+        }
+      }
+
     }
-  

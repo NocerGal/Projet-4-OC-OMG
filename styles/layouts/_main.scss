@@ -55,7 +55,6 @@ main {
     @media only screen and (min-width: 1055px) {
       display: flex;
       align-items: flex-start;
-      width: $width-var;
       min-width: 1080px;
     }
 
@@ -281,23 +280,19 @@ main {
           width: 100%;
           padding: 12px 15px;
 
-          // .price {
-          //   height: 100%;
-          //   display: flex;
-          //   justify-content: flex-end;
-          //   align-items: flex-end;
-          // }
-
           .card-txt {
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             text-align: left;
-            // margin-right: 10px;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+
+            p {
+              text-overflow: ellipsis;
+              overflow: hidden;
+              text-align-last: left;
+            }
           }
         }
       }

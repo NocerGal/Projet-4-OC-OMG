@@ -125,10 +125,6 @@ button span {
   left: -18%;
   padding: 4px 8px;
 }
-button p {
-  display: flex;
-  align-items: center;
-}
 button p i {
   padding-right: 20px;
 }
@@ -231,7 +227,6 @@ main .functioning {
   main .functioning {
     display: flex;
     align-items: flex-start;
-    width: 70%;
     min-width: 1080px;
   }
 }
@@ -269,9 +264,6 @@ main .restaurants .restaurants-container {
   align-items: flex-start;
   width: 335px;
 }
-main .restaurants .restaurants-container h2 {
-  border: 1px solid red;
-}
 @media only screen and (min-width: 1055px) {
   main .restaurants .restaurants-container {
     display: flex;
@@ -290,7 +282,6 @@ main .restaurants .restaurants-container .card-container {
 }
 @media only screen and (min-width: 1055px) {
   main .restaurants .restaurants-container .card-container {
-    border: 1px solid blue;
     width: 100%;
   }
   main .restaurants .restaurants-container .card-container a {
@@ -300,7 +291,6 @@ main .restaurants .restaurants-container .card-container {
     max-height: 251px;
     flex-grow: 1;
     min-width: 490px;
-    border: 1px solid red;
     margin: 0;
     margin-right: 0;
   }
@@ -392,33 +382,77 @@ main .menus .menus-container div {
 main .menus .menus-container div button {
   padding: 0;
   width: auto;
+  justify-content: flex-start;
   margin-bottom: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 main .menus .menus-container div button:hover .green-tick {
-  transform: translateX(-100px);
+  animation: 3s tickAnimationForwards forwards;
+}
+main .menus .menus-container div button:hover .green-tick .tick i {
+  animation: 2.5s tickAnimation forwards;
+  visibility: visible;
+}
+@keyframes tickAnimation {
+  0% {
+    visibility: hidden;
+  }
+  10% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes tickAnimationForwards {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 59px;
+    visibility: visible;
+  }
+}
+@keyframes tickAnimationReverse {
+  from {
+    width: 59px;
+  }
+  to {
+    width: 0px;
+    visibility: hidden;
+  }
 }
 main .menus .menus-container div button .green-tick {
+  transform: translateX(0px);
+  border: 1px solid green;
   position: relative;
-  right: -100px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  background: #99e2d0;
   height: 100%;
-  width: 100px;
-  padding: 12px 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  transition: 500ms ease-in-out;
 }
 main .menus .menus-container div button .green-tick .price {
-  transform: translateX(-90px);
+  padding-bottom: 12px;
+  padding-right: 90px;
+  border: 1px blue solid;
+  height: 100%;
+  justify-content: flex-end;
 }
-main .menus .menus-container div button .green-tick i {
-  transform: translateX(-60%) translateY(-40%);
+main .menus .menus-container div button .green-tick .tick {
+  width: 59px;
+  background: #99e2d0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease-in-out;
+}
+main .menus .menus-container div button .green-tick .tick i {
+  transition: none;
 }
 main .menus .menus-container div button .fa-check {
   display: flex;
@@ -432,8 +466,8 @@ main .menus .menus-container div button .fa-check {
   transition: all 300ms;
 }
 main .menus .menus-container div .card-description {
-  display: grid;
-  grid-template-columns: 80% 20%;
+  display: flex;
+  align-items: flex-start;
   width: 100%;
   padding: 12px 15px;
 }
@@ -444,8 +478,12 @@ main .menus .menus-container div .card-description .card-txt {
   justify-content: space-between;
   text-align: left;
   white-space: nowrap;
-  overflow: hidden;
+}
+main .menus .menus-container div .card-description .card-txt p {
   text-overflow: ellipsis;
+  overflow: hidden;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
 main .menus .btn {
   margin: 0 auto 0;
@@ -512,7 +550,7 @@ li {
   background-color: rgba(238, 235, 231, 0.6);
   z-index: 9999;
   position: absolute;
-  animation: 3s loaderAnimation forwards;
+  animation: 10s loaderAnimation forwards;
 }
 .loader .circle {
   display: flex;

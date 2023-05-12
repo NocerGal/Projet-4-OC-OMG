@@ -9,7 +9,12 @@
   background-color: rgba(238, 235, 231, 0.6);
   z-index: 9999;
   position: absolute;
-  animation: 10s loaderAnimation forwards;
+  animation: 13s loaderAnimation both;  
+
+  .loader-txt{
+    animation: 4s loaderAnimation both; 
+  }
+}
 
   .circle {
     display: flex;
@@ -20,7 +25,7 @@
     height: 100px;
     width: 100px;
     transform: rotate(0.2turn);
-    animation: 1500ms circleAnimation infinite alternate ease-in-out;
+    animation:  1.5s circleAnimation infinite alternate ease-in-out;
   }
 
   .dot {
@@ -48,4 +53,4 @@
       color: #ff79da;
     }
   }
-}
+

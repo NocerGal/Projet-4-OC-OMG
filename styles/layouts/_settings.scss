@@ -107,6 +107,8 @@ h4 {
 h5 {
   font-family: $font-roboto-bold;
   font-size: 1.125rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 h6 {
@@ -138,7 +140,7 @@ li {
   cursor: pointer;
 }
 
-button {
+.btn-white {
   transition: all 200ms;
 
   &:hover p i {

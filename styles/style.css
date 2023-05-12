@@ -66,6 +66,8 @@ h4 {
 h5 {
   font-family: Roboto-Bold, sans-serif;
   font-size: 1.125rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 h6 {
@@ -96,7 +98,7 @@ li {
   cursor: pointer;
 }
 
-button {
+.btn-white {
   transition: all 200ms;
   display: flex;
   justify-content: center;
@@ -114,18 +116,18 @@ button {
   background: #f6f6f6;
   position: relative;
 }
-button:hover p i {
+.btn-white:hover p i {
   color: #9356dc;
 }
-button:hover {
+.btn-white:hover {
   background: #f5edff;
 }
-button span {
+.btn-white span {
   position: relative;
   left: -18%;
   padding: 4px 8px;
 }
-button p i {
+.btn-white p i {
   padding-right: 20px;
 }
 
@@ -381,82 +383,60 @@ main .menus .menus-container div {
   display: flex;
   flex-direction: column;
 }
-main .menus .menus-container div button {
+main .menus .menus-container div .btn-white {
+  position: relative;
   padding: 0;
   width: auto;
   justify-content: flex-start;
   margin-bottom: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex-direction: row;
+  justify-content: space-between;
 }
-main .menus .menus-container div button:hover .green-tick {
-  animation: 3s tickAnimationForwards forwards;
+main .menus .menus-container div .btn-white:hover .green-tick {
+  width: 188px;
 }
-main .menus .menus-container div button:hover .green-tick .tick i {
-  animation: 2.5s tickAnimation forwards;
-  visibility: visible;
+main .menus .menus-container div .btn-white:hover .green-tick .tick {
+  width: 100%;
+  transform: translateX(0);
 }
-@keyframes tickAnimation {
-  0% {
-    visibility: hidden;
-  }
-  10% {
-    visibility: visible;
-  }
-  100% {
-    visibility: visible;
-  }
-}
-@keyframes tickAnimationForwards {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 59px;
-    visibility: visible;
-  }
-}
-@keyframes tickAnimationReverse {
-  from {
-    width: 59px;
-  }
-  to {
-    width: 0px;
-    visibility: hidden;
-  }
-}
-main .menus .menus-container div button .green-tick {
+main .menus .menus-container div .btn-white .green-tick {
   transform: translateX(0px);
-  border: 1px solid green;
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  width: 30%;
+  transition: 0.7s;
 }
-main .menus .menus-container div button .green-tick .price {
+main .menus .menus-container div .btn-white .green-tick .price {
   padding-bottom: 12px;
-  padding-right: 90px;
-  border: 1px blue solid;
   height: 100%;
   justify-content: flex-end;
+  transition: 0.7s;
+  width: 100%;
+  align-items: flex-end;
+  padding-right: 30px;
 }
-main .menus .menus-container div button .green-tick .tick {
-  width: 59px;
+main .menus .menus-container div .btn-white .green-tick .tick {
+  width: 0px;
   background: #99e2d0;
   height: 100%;
   display: flex;
+  max-width: 59px;
   justify-content: center;
   align-items: center;
-  transition: 1s ease-in-out;
+  transition: 0.8s;
+  transform: translateX(13px);
 }
-main .menus .menus-container div button .green-tick .tick i {
+main .menus .menus-container div .btn-white .green-tick .tick i {
   transition: none;
 }
-main .menus .menus-container div button .fa-check {
+main .menus .menus-container div .btn-white .fa-check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -470,8 +450,10 @@ main .menus .menus-container div button .fa-check {
 main .menus .menus-container div .card-description {
   display: flex;
   align-items: flex-start;
-  width: 100%;
   padding: 12px 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%;
 }
 main .menus .menus-container div .card-description .card-txt {
   height: 100%;
@@ -480,6 +462,9 @@ main .menus .menus-container div .card-description .card-txt {
   justify-content: space-between;
   text-align: left;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
 }
 main .menus .menus-container div .card-description .card-txt p {
   text-overflow: ellipsis;

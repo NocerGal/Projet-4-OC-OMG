@@ -35,6 +35,7 @@ main {
 
     p:nth-child(2) {
       margin: 15px 0 30px;
+
       @media only screen and (min-width: 1055px) {
         margin: 30px 0;
       }
@@ -166,6 +167,7 @@ main {
     background: $light-grey1;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+
     @media only screen and (min-width: 1055px) {
       background: none;
     }
@@ -191,6 +193,7 @@ main {
           margin-right: 24px;
         }
       }
+
       .plats {
         margin-bottom: 40px;
         max-width: 634px;
@@ -213,105 +216,67 @@ main {
           animation-delay: 400ms;
         }
       }
+
       div {
         display: flex;
         flex-direction: column;
 
         // Effet survole du tick vert
-        button {
+        .btn-white {
+          position: relative;
           padding: 0;
           width: auto;
           justify-content: flex-start;
           margin-bottom: 12px;
           overflow: hidden;
           text-overflow: ellipsis;
+          flex-direction: row;
+          justify-content: space-between;
 
-          &:hover .green-tick{
-            animation:  3s tickAnimationForwards forwards ;
-          }
+          &:hover .green-tick {
+            width:188px;
 
-          // &:hover .green-tick .tick {
-          //   width: 59px;
-          //   visibility: visible;
-          // }
-
-          &:hover .green-tick .tick i{
-            animation: 2.5s tickAnimation forwards;
-            visibility: visible;
-          }
-
-          @keyframes tickAnimation {
-            0%{
-              visibility: hidden;
-            }
-
-            10%{
-              visibility: visible;
-            }
-
-            100%{
-              visibility: visible;
+            .tick {
+              width: 100%;
+              transform: translateX(0);
             }
           }
-
-          @keyframes tickAnimationForwards {
-            from{
-              width: 0px;
-
-            }
-
-            to{
-              width: 59px;
-              visibility: visible;
-            }
-          }
-
-          @keyframes tickAnimationReverse {
-            from{
-              width: 59px;
-
-            }
-
-            to{
-              width: 0px;
-              visibility: hidden;
-            }
-          }
-
-          
 
           .green-tick {
             transform: translateX(0px);
-            border: 1px solid green;
-            position: relative;
             display: flex;
             flex-direction: row;
             align-items: flex-end;
-            justify-content: center;
+            justify-content: space-between;
             height: 100%;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
+            width: 30%;
+            transition: 0.7s;
 
             .price {
               padding-bottom: 12px;
-              padding-right: 90px;
-              border: 1px blue solid;
               height: 100%;
               justify-content: flex-end;
+              transition: 0.7s;
+              width: 100%;
+              align-items: flex-end;
+              padding-right: 30px;
             }
 
             .tick {
-              width: 59px;
+              width: 0px;
               background: $fade-green;
               height: 100%;
               display: flex;
+              max-width: 59px;
               justify-content: center;
               align-items: center;
-              transition: 1s ease-in-out;
+              transition: 0.8s;
+              transform: translateX(13px);
 
               i {
                 transition: none;
-                // visibility: hidden;
               }
             }
           }
@@ -332,8 +297,10 @@ main {
         .card-description {
           display: flex;
           align-items: flex-start;
-          width: 100%;
           padding: 12px 15px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 80%;
 
           .card-txt {
             height: 100%;
@@ -342,6 +309,9 @@ main {
             justify-content: space-between;
             text-align: left;
             white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 100%;
 
             p {
               text-overflow: ellipsis;

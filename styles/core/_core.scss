@@ -169,16 +169,12 @@
     opacity: 1;
   }
 
-  95% {
+  95%{
     opacity: 0.9;
   }
-
-  98% {
-    opacity: 0.8;
-  }
-
   100% {
     opacity: 0;
     z-index: -9999;
   }
 }
+

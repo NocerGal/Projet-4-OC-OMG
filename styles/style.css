@@ -146,9 +146,11 @@ span {
   padding: 10px 15px;
   height: 100%;
 }
-.card-description i {
-  font-size: 30px;
-  font-weight: 100;
+.card-description .icon-stack {
+  height: 100%;
+}
+.card-description .icon-stack i {
+  font-size: 26px;
 }
 
 header {
@@ -550,9 +552,13 @@ li {
   background-color: rgba(238, 235, 231, 0.6);
   z-index: 9999;
   position: absolute;
-  animation: 10s loaderAnimation forwards;
+  animation: 13s loaderAnimation both;
 }
-.loader .circle {
+.loader .loader-txt {
+  animation: 4s loaderAnimation both;
+}
+
+.circle {
   display: flex;
   justify-content: center;
   border-top: 3px solid #9356dc;
@@ -561,25 +567,26 @@ li {
   height: 100px;
   width: 100px;
   transform: rotate(0.2turn);
-  animation: 1500ms circleAnimation infinite alternate ease-in-out;
+  animation: 1.5s circleAnimation infinite alternate ease-in-out;
 }
-.loader .dot {
+
+.dot {
   transform: translateY(-92px) translateX(0px);
   display: flex;
   justify-content: center;
 }
-.loader .dot .first {
+.dot .first {
   line-height: 45px;
   animation: doteAnimation 400ms infinite alternate;
   color: #9356dc;
 }
-.loader .dot .second {
+.dot .second {
   line-height: 45px;
   animation: doteAnimation 400ms infinite alternate;
   animation-delay: 250ms;
   color: #ff79da;
 }
-.loader .dot .third {
+.dot .third {
   line-height: 45px;
   animation: doteAnimation 400ms infinite alternate;
   animation-delay: 400ms;
@@ -780,9 +787,6 @@ li {
   }
   95% {
     opacity: 0.9;
-  }
-  98% {
-    opacity: 0.8;
   }
   100% {
     opacity: 0;

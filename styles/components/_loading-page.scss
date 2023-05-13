@@ -10,6 +10,7 @@
   z-index: 9999;
   position: absolute;
   animation: 13s loaderAnimation both;  
+  position: fixed;
 
   .loader-txt{
     animation: 4s loaderAnimation both; 

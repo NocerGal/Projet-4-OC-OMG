@@ -709,7 +709,7 @@ li {
     background: linear-gradient(1deg, #9356dc, #ff79da);
   }
   100% {
-    background: linear-gradient(0sdeg, #9356dc, #ff79da);
+    background: linear-gradient(0deg, #9356dc, #ff79da);
   }
 }
 @keyframes doteAnimation {
